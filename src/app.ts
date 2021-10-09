@@ -1,7 +1,10 @@
 import App from "./router"
 import { createServer } from "http"
+import dotenv from "dotenv"
 
-const port: number = Number(process.env.PORT) || 8080
+dotenv.config()
+
+const port: number = Number(process.env.PORT)
 
 const server = createServer(App).listen(port)
 
